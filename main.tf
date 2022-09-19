@@ -54,7 +54,7 @@ resource "azurerm_network_interface" "eastus" {
   }
 }
 
-resource "azurerm_windows_virtual_machine" "vmexample" {
+resource "azurerm_windows_virtual_machine" "eastus" {
   count =  4
   name                = "eus-vm-${count.index}"
   resource_group_name = var.resoucegp
@@ -95,7 +95,7 @@ resource "azurerm_network_interface" "westus" {
   }
 }
 
-resource "azurerm_windows_virtual_machine" "vmexample" {
+resource "azurerm_windows_virtual_machine" "westus" {
   count =  4
   name                = "wus-vm-${count.index}"
   resource_group_name = var.resoucegp
